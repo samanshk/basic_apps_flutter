@@ -11,35 +11,6 @@ class _PostState extends State<Post> {
   TextEditingController location = TextEditingController();
   TextEditingController type = TextEditingController();
   TextEditingController mobile = TextEditingController();
-  
-  // bool verified = false;
-  //  verify() {
-  //   if (name.text.isEmpty) {
-  //     msg = 'Enter your name';
-  //   }
-  //   else if(email.text.isEmpty) {
-  //     msg = 'Enter your email';
-  //   }
-  //   else if(pass.text.isEmpty) {
-  //     msg = 'Enter your password';
-  //   }
-  //   else if(pass2.text.isEmpty) {
-  //     msg = 'Re-enter your password';
-  //   }
-  //   else if (pass.text.length >= 10 && !pass.text.contains(RegExp(r'\W')) && RegExp(r'\d+\w*\d+').hasMatch(pass.text)) {
-  //       if (pass.text == pass2.text) {
-  //         verified = true;
-  //       } else 
-  //         msg = 'Passwords do not match';
-  //   }
-  //   else {
-  //     msg = 'Invalid password';
-  //   }
-
-  //   setState(() {
-  //     msg = msg;
-  //   });
-  // }
 
   sendData() async {
     final response = await http.post('http://userapi.tk/shobhit/insertsos.php', body: {
@@ -106,15 +77,6 @@ class _PostState extends State<Post> {
               MaterialButton(
                 onPressed: () {
                   sendData();
-                  // verify();
-                  // if(verified) {
-                  //   Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //       builder: (context) => Profile(name.text, project.text, apps.text, repo.text)
-                  //     )
-                  //   );
-                  // }
                 },
                 color: Colors.blue,
                 child: Text(
@@ -123,20 +85,6 @@ class _PostState extends State<Post> {
                 ),
                 padding: EdgeInsets.all(10),
               ),
-              // Padding(padding: EdgeInsets.all(10)),
-              // Divider(thickness: 2, color: Colors.white,),
-              // Padding(padding: EdgeInsets.all(10)),
-              // MaterialButton(
-              //   onPressed: () {
-              //     Navigator.pop(context);
-              //   },
-              //   color: Colors.blue,
-              //   child: Text(
-              //     'Already have an account',
-              //     style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white,fontSize: 20)
-              //   ),
-              //   padding: EdgeInsets.all(10),
-              // )
             ],
           ),
         ),
